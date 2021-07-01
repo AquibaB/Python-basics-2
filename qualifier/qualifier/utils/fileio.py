@@ -31,24 +31,23 @@ def load_csv(csvpath):
     return data
 
 
-output_path = Path("qualifying_loans.csv")
-
-def save_csv(output_path):
+def save_csv(output_path, data, header=None):
     """Saves CSV file in output path
     
     Args:
-        qualiying_loans (list)
+        path to CSV (Path)
+        data such as qualiying_loans (list)
 
     Returns:
         A CSV file with rows of data from qualiying_loans
     
     """
 
-    with open(output_path, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-
-        for loan in qualifying_loans:
-            csvwriter.writerow(loan.values())
-
+    with open(output_path, "w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        if header:
+            csvwriter.writerow(header)
+        
+        csvwriter.writerows(data)
 
 

@@ -32,7 +32,7 @@ def load_bank_data():
         The bank data from the data rate sheet CSV file.
     """
 
-    csvpath = questionary.text("qualifier/data/daily_rate_sheet.csv").ask()
+    csvpath = questionary.text("What is the path to the banking data?").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
         sys.exit(f"Oops! Can't find this path: {csvpath}")
@@ -109,8 +109,17 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    
+    ask_to_save = questionary.confirm("Would you like to save the list of qualifying loans?").ask()
+    if ask_to_save == True:
+        output_path = questionary.text("What is the path to save the CSV file?").ask()
+        output_path = output_path + '_qualifying_loans.csv'
+
+        save_csv(output_path, qualifying_loans)
+        print("Done! Thanks for banking with Predator Loans. Good bye!")
+    
+    else:
+        sys.exit("Thanks for banking with Predator Loans. Good bye!")
 
 
 def run():
