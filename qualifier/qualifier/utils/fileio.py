@@ -34,7 +34,15 @@ def load_csv(csvpath):
 output_path = Path("qualifying_loans.csv")
 
 def save_csv(output_path):
-    """Saves CSV file in output path"""
+    """Saves CSV file in output path
+    
+    Args:
+        qualiying_loans (list)
+
+    Returns:
+        A CSV file with rows of data from qualiying_loans
+    
+    """
 
     with open(output_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
