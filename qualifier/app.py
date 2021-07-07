@@ -113,11 +113,12 @@ def save_qualifying_loans(qualifying_loans):
     ask_to_save = questionary.confirm("Would you like to save the list of qualifying loans?").ask()
     if ask_to_save == True:
         output_path = questionary.text("What is the path to save the CSV file?").ask()
-        output_path = output_path + '_qualifying_loans.csv'
-        output_path = Path(output_path)
-        if not output_path.exists():
+        if Path(output_path).exists() == False:
             sys.exit(f"Opps! Can't find this path:{output_path}. Thanks for banking with Predator Loans. Good bye!")
 
+        output_path = output_path + '_qualifying_loans.csv'
+        output_path = Path(output_path)
+        
         save_csv(output_path, qualifying_loans)
         print("Done! Thanks for banking with Predator Loans. Good bye!")
     

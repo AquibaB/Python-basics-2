@@ -35,8 +35,8 @@ def save_csv(output_path, data, header=None):
     """Saves CSV file in output path
     
     Args:
-        path to CSV (Path)
-        data such as qualiying_loans (list)
+        path to CSV (Path): output_path
+        data such as qualiying_loans (list): data
 
     Returns:
         A CSV file with rows of data from qualiying_loans
