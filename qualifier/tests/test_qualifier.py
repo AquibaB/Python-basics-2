@@ -15,7 +15,6 @@ from qualifier.filters import loan_to_value
 from qualifier.filters import max_loan_size
 
 def test_save_csv():
-    # @TODO: Your code here!
     # Use Path from pathlib to output the test csv to ./data/output/qualifying_loans.csv
     assert Path("/Users/aquiba/Fintech-Workspace/Module_2/bootcamp_challenge2/qualifier/data_qualifying_loans.csv").exists()
 
@@ -26,16 +25,21 @@ def test_calculate_loan_to_value_ratio():
     assert calculators.calculate_loan_to_value_ratio(210000, 250000) == 0.84
 
 def test_filters():
-    bank_data = fileio.load_csv(Path('./data/daily_rate_sheet.csv'))
+    fileio.load_csv(Path('./data/daily_rate_sheet.csv'))
     current_credit_score = 750
-    debt = 1500
-    income = 4000
-    loan = 210000
-    home_value = 250000
+    assert isinstance(current_credit_score, int)
+    debt = 1500.0
+    assert isinstance(debt, float)
+    income = 4000.0
+    assert isinstance(income, float)
+    loan = 210000.0
+    assert isinstance(loan, float)
+    home_value = 250000.0
+    assert isinstance(home_value, float)
 
     monthly_debt_ratio = 0.375
+    assert isinstance(monthly_debt_ratio, float)
 
     loan_to_value_ratio = 0.84
+    assert isinstance(loan_to_value_ratio, float)
 
-    # @TODO: Test the new save_csv code!
-    # YOUR CODE HERE!
