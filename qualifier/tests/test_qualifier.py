@@ -25,8 +25,8 @@ def test_calculate_loan_to_value_ratio():
     assert calculators.calculate_loan_to_value_ratio(210000, 250000) == 0.84
 
 def test_filters():
-    fileio.load_csv(Path('./data/daily_rate_sheet.csv'))
-    current_credit_score = 750
+    bank_list = fileio.load_csv(Path('./data/daily_rate_sheet.csv'))
+    current_credit_score = credit_score.filter_credit_score(750, bank_list)
     assert isinstance(current_credit_score, int)
     debt = 1500.0
     assert isinstance(debt, float)
