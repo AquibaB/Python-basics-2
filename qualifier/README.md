@@ -25,7 +25,8 @@ This projects uses Python 3.7 and imports the following packages:
 
 Install the following dependencies before running the application.
 
-```import sys
+```
+import sys
 import fire
 import questionary
 import csv
