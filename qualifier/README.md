@@ -38,6 +38,7 @@ from pathlib import Path
 ## Usage
 
 1- Launch application
+
 ```python app.py
 ```
 
@@ -45,11 +46,16 @@ from pathlib import Path
 *Input the path to the banking data (path to the CSV file)*
 
 3- Applicant answers the following questions:
-*3.1- What's your credit score?
-3.2- What's your current amount of monthly debt?
-3.3- What's your total monthly income?
-3.4- What's your desired loan amount?
-3.5 - What's your home value?*
+
+*3.1- What's your credit score?*
+
+*3.2- What's your current amount of monthly debt?*
+
+*3.3- What's your total monthly income?*
+
+*3.4- What's your desired loan amount?*
+
+*3.5 - What's your home value?*
 
 4- Save the list of qualifying loans?
 *Yes or No*
@@ -67,7 +73,7 @@ Aquiba Benarroch
 
 ## License
 
-MIT License
+*MIT License
 
 Copyright (c) 2021 Aquiba Benarroch
 
@@ -87,4 +93,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE.*
