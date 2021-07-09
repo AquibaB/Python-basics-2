@@ -39,8 +39,10 @@ from pathlib import Path
 
 1- Launch application
 
+
 ```python app.py
 ```
+
 
 2- First prompt: What is the path to the banking data?
 *Input the path to the banking data (path to the CSV file)*
