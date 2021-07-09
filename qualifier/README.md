@@ -25,11 +25,11 @@ This projects uses Python 3.7 and imports the following packages:
 
 Install the following dependencies before running the application.
 
-'''import sys
+```import sys
 import fire
 import questionary
 import csv
-from pathlib import Path'''
+from pathlib import Path```
 
 
 ---
@@ -37,7 +37,7 @@ from pathlib import Path'''
 ## Usage
 
 1- Launch application
-'''python app.py'''
+```python app.py```
 
 2- First prompt: What is the path to the banking data?
 *Input the path to the banking data (path to the CSV file)*
